@@ -1,5 +1,6 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Hangman {
@@ -14,4 +15,8 @@ public class Hangman {
     private static FileReader fileReader;
     private static BufferedReader bufferedFileReader;
 
+
+    public Hangman()  throws IOException {
+
+    }
 }
