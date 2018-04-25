@@ -3,6 +3,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Hangman {
     String word;
@@ -40,5 +41,11 @@ public class Hangman {
         } catch (IOException e) {
             System.out.println("Could not init streams");
         }
+    }
+
+    public String pickWord() {
+        Random random = new Random();
+        int wordIndex = Math.abs(random.nextInt() % dictionary.size());
+        return dictionary.get(wordIndex);
     }
 }
