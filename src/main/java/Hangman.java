@@ -27,8 +27,18 @@ public class Hangman {
     public void initializeStreams() throws IOException {
         try {
             File inFile = new File("dictionary.txt");
-        } catch (IOException e) {
+            fileReader = new FileReader(inFile);
+            bufferedFileReader = new BufferedReader(fileReader);
+            String currentLine = bufferedFileReader.readLine();
+            while (currentLine != null) {
+                dictionary.add(currentLine);
+                currentLine = bufferedFileReader.readLine();
+            }
+            bufferedFileReader.close();
+            fileReader.close();
 
+        } catch (IOException e) {
+            System.out.println("Could not init streams");
         }
     }
 }
