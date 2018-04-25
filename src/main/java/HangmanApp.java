@@ -14,6 +14,10 @@ public class HangmanApp {
             while (!game.gameOver()) {
 
             }
+
+            System.out.println("Do you want to play more? Type Y if yes:");
+            Character response = sc.next().toUpperCase().charAt(0);
+            doYouWantToPlay = (response == 'Y');
         }
     }
 }
