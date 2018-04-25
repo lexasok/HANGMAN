@@ -17,6 +17,9 @@ public class Hangman {
 
 
     public Hangman()  throws IOException {
+        initializeStreams();
+        this.word = pickWord();
+        this.currentGuess = initializeCurrentGuess();
 
     }
 }
