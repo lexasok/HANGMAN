@@ -60,4 +60,10 @@ public class Hangman {
         }
         return current;
     }
+
+    public String drawPic() {
+
+        return "Number of your try: " + (currentTry + 1) + "Left: " + (maxTries - currentTry + 1) + "tries!";
+
+    }
 }
