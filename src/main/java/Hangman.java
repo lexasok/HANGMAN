@@ -22,4 +22,8 @@ public class Hangman {
         this.currentGuess = initializeCurrentGuess();
 
     }
+
+    public void initializeStreams() throws IOException {
+
+    }
 }
