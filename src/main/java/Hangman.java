@@ -48,4 +48,16 @@ public class Hangman {
         int wordIndex = Math.abs(random.nextInt() % dictionary.size());
         return dictionary.get(wordIndex);
     }
+
+    public StringBuilder initializeCurrentGuess() {
+        StringBuilder current = new StringBuilder();
+        for (int i = 0; i < word.length() * 2; i++) {
+            if (i % 2 == 0) {
+                current.append("_");
+            } else {
+                current.append(" ");
+            }
+        }
+        return current;
+    }
 }
