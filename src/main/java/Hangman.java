@@ -68,4 +68,8 @@ public class Hangman {
     public String getFormalCurrentGuess() {
         return "Current guess: " + currentGuess.toString();
     }
+
+    public boolean gameOver() {
+        return false;
+    }
 }
