@@ -62,7 +62,7 @@ public class Hangman {
     }
 
     public String drawPic() {
-        return "Number of your try: " + (currentTry + 1) + "; Left: " + (maxTries - currentTry + 1) + "tries!";
+        return "Number of your try: " + (currentTry + 1) + "; Left: " + (maxTries - currentTry - 1) + "tries!";
     }
 
     public String getFormalCurrentGuess() {
