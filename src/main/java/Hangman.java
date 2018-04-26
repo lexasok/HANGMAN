@@ -74,7 +74,18 @@ public class Hangman {
     }
 
     public boolean playGuess(char guess) {
-        return true;
+        boolean isItAGoodGuess = false;
+        for (int i = 0; i < word.length(); i++) {
+            if (word.charAt(i) == guess) {
+                currentGuess.setCharAt(i * 2, guess);
+                isItAGoodGuess = true;
+                previousGuesses.add(guess);
+            }
+        }
+        if (!isItAGoodGuess) {
+            currentTry++;
+        }
+        return isItAGoodGuess;
     }
 
     public boolean isGuessedAlready(char guess) {
