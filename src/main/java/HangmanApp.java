@@ -26,5 +26,7 @@ public class HangmanApp {
             Character response = sc.next().toUpperCase().charAt(0);
             doYouWantToPlay = (response == 'Y');
         }
+
+        System.out.println("\nBye bye!");
     }
 }
