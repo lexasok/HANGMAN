@@ -72,4 +72,12 @@ public class Hangman {
     public boolean gameOver() {
         return true;
     }
+
+    public boolean playGuess(char guess) {
+        return true;
+    }
+
+    public boolean isGuessedAlready() {
+        return false;
+    }
 }
