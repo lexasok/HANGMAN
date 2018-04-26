@@ -5,7 +5,6 @@ public class HangmanApp {
     public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
         System.out.println("It's f@cking hangman, man!");
-        System.out.println();
 
         boolean doYouWantToPlay = true;
 
@@ -16,10 +15,10 @@ public class HangmanApp {
             Hangman game = new Hangman();
 
             do {
-                System.out.println();
                 System.out.println(game.drawPic());
                 System.out.println(game.getFormalCurrentGuess());
 
+                System.out.println(game.word);
             }
             while (!game.gameOver());
 

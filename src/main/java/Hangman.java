@@ -70,6 +70,6 @@ public class Hangman {
     }
 
     public boolean gameOver() {
-        return false;
+        return true;
     }
 }
