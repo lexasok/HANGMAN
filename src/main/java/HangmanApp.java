@@ -27,6 +27,12 @@ public class HangmanApp {
                     guess = sc.next().toLowerCase().charAt(0);
                 }
 
+                if (game.playGuess(guess)) {
+                    System.out.println("Great guess!");
+                } else {
+                    System.out.println("You miss!");
+                }
+
             }
             while (!game.gameOver());
 
