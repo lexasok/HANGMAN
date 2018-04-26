@@ -62,7 +62,7 @@ public class Hangman {
     }
 
     public String drawPic() {
-        return "Number of your try: " + (currentTry + 1) + "; Left: " + (maxTries - currentTry) + " tries!";
+        return "Number of your life's: " + (currentTry + 1) + "; Left: " + (maxTries - currentTry) + " life's!";
     }
 
     public String getFormalCurrentGuess() {
@@ -70,16 +70,24 @@ public class Hangman {
     }
 
     public boolean gameOver() {
-        return true;
+        if (!currentGuess.toString().contains("_")) {
+            System.out.println("\nYOU WIN\nYOU WIN\nYOU WIN\n");
+            return true;
+        }
+        if (currentTry == 6) {
+            System.out.println("Game over");
+            return true;
+        }
+        return currentTry == 6;
     }
 
     public boolean playGuess(char guess) {
         boolean isItAGoodGuess = false;
+        previousGuesses.add(guess);
         for (int i = 0; i < word.length(); i++) {
             if (word.charAt(i) == guess) {
                 currentGuess.setCharAt(i * 2, guess);
                 isItAGoodGuess = true;
-                previousGuesses.add(guess);
             }
         }
         if (!isItAGoodGuess) {
