@@ -10,6 +10,10 @@ public class HangmanApp {
 
         while (doYouWantToPlay) {
             System.out.println();
+            System.out.println("Lets's play!\n");
+
+            Hangman game = new Hangman();
+
 
             while (!game.gameOver()) {
 
