@@ -22,7 +22,7 @@ public class HangmanApp {
 
                 System.out.println("Enter a character: ");
                 char guess = sc.next().toLowerCase().charAt(0);
-                while (game.isGuessedAlready()) {
+                while (game.isGuessedAlready(guess)) {
                     System.out.println("You've already guessed that character! Try again: ");
                     guess = sc.next().toLowerCase().charAt(0);
                 }

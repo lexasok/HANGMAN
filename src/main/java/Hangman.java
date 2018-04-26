@@ -77,7 +77,7 @@ public class Hangman {
         return true;
     }
 
-    public boolean isGuessedAlready() {
-        return false;
+    public boolean isGuessedAlready(char guess) {
+        return previousGuesses.contains(guess);
     }
 }
