@@ -78,7 +78,7 @@ public class Hangman {
             System.out.println("\nGAME OVER MAN!\nGAME OVER MAN!\nGAME OVER MAN!");
             return true;
         }
-        return currentTry == 6;
+        return currentTry == maxTries;
     }
 
     public boolean playGuess(char guess) {
