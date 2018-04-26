@@ -1,7 +1,8 @@
+import java.io.IOException;
 import java.util.Scanner;
 
 public class HangmanApp {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
         System.out.println("It's f@cking hangman, man!");
         System.out.println();
@@ -14,10 +15,13 @@ public class HangmanApp {
 
             Hangman game = new Hangman();
 
-
-            while (!game.gameOver()) {
+            do {
+                System.out.println();
+                System.out.println(game.drawPic());
+                System.out.println(game.getFormalCurrentGuess());
 
             }
+            while (!game.gameOver());
 
             System.out.println("Do you want to play more? Type Y if yes:");
             Character response = sc.next().toUpperCase().charAt(0);
