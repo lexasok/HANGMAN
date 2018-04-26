@@ -62,7 +62,7 @@ public class Hangman {
     }
 
     public String drawPic() {
-        return "Number of your life's: " + (currentTry + 1) + "; Left: " + (maxTries - currentTry) + " life's!";
+        return "Left: " + (maxTries - currentTry) + " life's!";
     }
 
     public String getFormalCurrentGuess() {
@@ -75,7 +75,7 @@ public class Hangman {
             return true;
         }
         if (currentTry == 6) {
-            System.out.println("Game over");
+            System.out.println("\nGAME OVER MAN!\nGAME OVER MAN!\nGAME OVER MAN!");
             return true;
         }
         return currentTry == 6;
